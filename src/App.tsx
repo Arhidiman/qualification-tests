@@ -4,6 +4,7 @@ import { AppProviders } from './app/providers/AppProviders';
 import { Main } from './pages/Main/Main';
 import { TestPage } from './pages/Test/TestPage';
 import { Results } from './pages/Results/Results';
+import { ResultDetail } from './pages/ResultDetail/ResultDetail';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
               <Route path="/test/:testId/start" element={<TestPage />} />
               <Route path="/test/:testId/ticket/:ticketId" element={<TestPage />} />
               <Route path="/results" element={<Results />} />
+              <Route path="/result/:attemptId" element={<ResultDetail />} />
+
             </Routes>
           </div>
         </BrowserRouter>

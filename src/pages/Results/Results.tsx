@@ -1,6 +1,6 @@
 // src/pages/Results/Results.tsx
-import { Typography, Card, Statistic, Row, Col, Table, Tag, Button, Empty, Modal, message } from 'antd';
-import { TrophyOutlined, CheckCircleOutlined, ClockCircleOutlined, ReloadOutlined, DeleteOutlined } from '@ant-design/icons';
+import { Typography, Card, Statistic, Row, Col, Table, Tag, Button, Empty, Modal, Space, message } from 'antd';
+import { TrophyOutlined, CheckCircleOutlined, ClockCircleOutlined, ReloadOutlined, DeleteOutlined, FileSearchOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { useTestStore } from '../../app/store/testStore';
@@ -94,24 +94,33 @@ export function Results() {
       key: 'correctCount',
       render: (correct: number, record: Attempt) => `${correct} / ${record.totalQuestions}`,
     },
-    {
-      title: 'Действия',
-      key: 'action',
-      render: (_: any, record: Attempt) => (
-        <Button 
-          type="link" 
-          onClick={() => {
-            if (record.ticketId) {
-              navigate(`/test/${record.testId}/ticket/${record.ticketId}`);
-            } else {
-              navigate(`/test/${record.testId}/start`);
-            }
-          }}
-        >
-          Пройти заново
-        </Button>
-      ),
-    },
+{
+  title: 'Действия',
+  key: 'action',
+  render: (_: any, record: Attempt) => (
+    <Space direction="vertical" size="small">
+      <Button 
+        type="link" 
+        onClick={() => {
+          if (record.ticketId) {
+            navigate(`/test/${record.testId}/ticket/${record.ticketId}`);
+          } else {
+            navigate(`/test/${record.testId}/start`);
+          }
+        }}
+      >
+        Пройти заново
+      </Button>
+      <Button 
+        type="link" 
+        icon={<FileSearchOutlined />}
+        onClick={() => navigate(`/result/${record.id}`)}
+      >
+        Разбор
+      </Button>
+    </Space>
+  ),
+}
   ];
 
   return (
