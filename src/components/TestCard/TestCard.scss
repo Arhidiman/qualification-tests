@@ -1,0 +1,25 @@
+.test-card {
+  background: #1e1e2e;
+  border: 1px solid #2a2a3e;
+  transition: transform 0.2s, border-color 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: #00a8ff;
+  }
+
+  .test-card-icon {
+    font-size: 48px;
+    color: #00a8ff;
+    margin-bottom: 16px;
+  }
+
+  .test-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "simple-test",
+  "title": "Простой тест",
+  "description": "Тест без разделения на билеты",
+  "hasTickets": false,
+  "questions": [
+    {
+      "id": 1,
+      "text": "Вопрос 1",
+      "type": "single",
+      "options": ["A", "B", "C"],
+      "correctAnswers": [0]
+    }
+  ]
+}

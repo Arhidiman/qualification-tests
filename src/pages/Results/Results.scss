@@ -1,0 +1,74 @@
+// src/pages/Results/Results.scss (добавить или обновить .action-buttons)
+.results-page {
+  min-height: 100vh;
+
+  .results-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 16px;
+
+    @media (min-width: 768px) {
+      padding: 40px 24px;
+    }
+
+    .results-title {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #00a8ff;
+      font-size: clamp(20px, 6vw, 32px);
+    }
+
+    .stats-row {
+      margin-bottom: 24px;
+    }
+
+    .filter-section {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      justify-content: center;
+
+      button {
+        font-size: clamp(12px, 3vw, 14px);
+        padding: 4px 12px;
+        height: auto;
+      }
+    }
+
+    .history-card {
+      background: #1e1e2e;
+      border: 1px solid #2a2a3e;
+      margin-bottom: 24px;
+      overflow-x: auto;
+
+      .ant-table {
+        font-size: clamp(12px, 3vw, 14px);
+        min-width: 500px;
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+
+      button {
+        padding: 8px 20px;
+        height: auto;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+          padding: 8px 24px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .empty-state {
+      margin-top: 60px;
+      padding: 0 16px;
+    }
+  }
+}

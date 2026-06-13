@@ -1,0 +1,81 @@
+.test-page {
+  min-height: 100vh;
+
+  .test-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 16px;
+
+    @media (min-width: 768px) {
+      padding: 32px 24px;
+    }
+
+    .test-header {
+      margin-bottom: 24px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 32px;
+      }
+
+      h3 {
+        margin: 0 0 20px 0;
+        color: #00a8ff;
+        text-align: center;
+        font-size: clamp(18px, 5vw, 28px);
+      }
+
+      .test-stats {
+        margin-top: 16px;
+      }
+
+      .stat-card {
+        background: #1e1e2e;
+        border: 1px solid #2a2a3e;
+        text-align: center;
+        
+        .ant-statistic-title {
+          font-size: clamp(12px, 3vw, 14px);
+        }
+      }
+
+      .timer-card {
+        .ant-statistic-content {
+          font-family: monospace;
+        }
+      }
+    }
+
+    .questions-section {
+      margin-bottom: 24px;
+    }
+
+    .submit-section {
+      display: flex;
+      justify-content: center;
+      padding: 16px 0 40px;
+
+      @media (min-width: 768px) {
+        padding: 24px 0 48px;
+      }
+
+      button {
+        min-width: 180px;
+        height: 44px;
+        font-size: 14px;
+
+        @media (min-width: 768px) {
+          min-width: 200px;
+          height: 48px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .loading {
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 16px;
+    color: #888;
+  }
+}

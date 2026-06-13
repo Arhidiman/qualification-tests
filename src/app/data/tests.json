@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "id": "golden-rules",
+      "file": "golden-rules.json"
+    },
+    {
+      "id": "oil-gas-test",
+      "file": "test-1.json"
+    },
+    {
+      "id": "new-test-1",
+      "file": "new-test-1.json"
+    },
+    {
+      "id": "fountain-safety",
+      "file": "fountain-safety.json"
+    }
+  ]
+}
