@@ -1,4 +1,4 @@
-import { List, Card, Button, Typography, Tag } from 'antd';
+import { Card, Button, Typography, Tag } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import type { Ticket } from '../../app/store/testStore';
 import './TicketList.scss';
@@ -16,6 +16,9 @@ export function TicketList({ testId, tickets }: TicketListProps) {
   const handleSelectTicket = (ticketId: string) => {
     navigate(`/test/${testId}/ticket/${ticketId}`);
   };
+
+
+  console.log(tickets, 'tickets')
 
   return (
     <div className="ticket-list">

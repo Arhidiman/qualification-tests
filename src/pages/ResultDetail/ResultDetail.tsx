@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { Button, Card, Typography, Tag, Space, message, Descriptions } from 'antd';
+import { Button, Card, Typography, Tag, message } from 'antd';
 import { ArrowLeftOutlined, CheckCircleOutlined, CloseCircleOutlined } from '@ant-design/icons';
 import { Header } from '../../components/Header/Header';
 import { useTestStore } from '../../app/store/testStore';
@@ -84,19 +84,19 @@ export function ResultDetail() {
         setQuestionsDetail(details);
     }, [attemptId, attempts, tests, navigate]);
 
-    const formatAnswerNumber = (index: number): string => {
-        return String.fromCharCode(65 + index);
-    };
+    // const formatAnswerNumber = (index: number): string => {
+    //     return String.fromCharCode(65 + index);
+    // };
 
-    const formatAnswersWithNumbers = (indices: number[], options: string[]): string => {
-        if (!indices.length) return 'Не выбран';
-        return indices.map((i) => `${formatAnswerNumber(i)}. ${options[i]}`).join(' | ');
-    };
+    // const formatAnswersWithNumbers = (indices: number[], options: string[]): string => {
+    //     if (!indices.length) return 'Не выбран';
+    //     return indices.map((i) => `${formatAnswerNumber(i)}. ${options[i]}`).join(' | ');
+    // };
 
-    const formatAnswersNumbersOnly = (indices: number[]): string => {
-        if (!indices.length) return 'Не выбран';
-        return indices.map((i) => formatAnswerNumber(i)).join(', ');
-    };
+    // const formatAnswersNumbersOnly = (indices: number[]): string => {
+    //     if (!indices.length) return 'Не выбран';
+    //     return indices.map((i) => formatAnswerNumber(i)).join(', ');
+    // };
 
     if (!attempt || !test) {
         return (

@@ -12,7 +12,7 @@ const { Title } = Typography;
 
 export function Results() {
   const navigate = useNavigate();
-  const { attempts, addAttempt } = useTestStore(); // addAttempt не используется, но оставим для совместимости
+  const { attempts } = useTestStore(); // addAttempt не используется, но оставим для совместимости
   const [selectedTestId, setSelectedTestId] = useState<string | null>(null);
 
   // Получаем store и метод для очистки напрямую

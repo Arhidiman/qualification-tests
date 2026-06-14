@@ -19,7 +19,7 @@ function App() {
       }}
     >
       <AppProviders>
-        <BrowserRouter>
+        <BrowserRouter basename="/qualification-tests">
           <div className="app-container">
             <Routes>
               <Route path="/" element={<Main />} />
@@ -28,7 +28,6 @@ function App() {
               <Route path="/test/:testId/ticket/:ticketId" element={<TestPage />} />
               <Route path="/results" element={<Results />} />
               <Route path="/result/:attemptId" element={<ResultDetail />} />
-
             </Routes>
           </div>
         </BrowserRouter>
